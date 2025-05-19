@@ -1,0 +1,832 @@
+/* === FUENTES DE GOOGLE === */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;500;700&family=Source+Sans+Pro:wght@400;700&display=swap');
+
+/* === VARIABLES DE COLOR === */
+:root {
+  --color-principal: #2c3e50; /* Títulos fuertes, botones */
+  --color-acento: #3aafaf;    /* Títulos suaves, fondos de cajitas */
+  --color-fondo-claro: #d6dbdf; /* Fondo intermedio */
+  --color-blanco: #ffffff;    
+  --color-negro: #000000;
+}
+
+/* === RESET === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: var(--color-blanco);
+  color: var(--color-negro);
+  line-height: 1.6;
+}
+
+/* === TIPOGRAFÍAS POR USO === */
+.titulo {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-principal);
+}
+
+.subtitulo, .nav-link, .boton, .frase-final, .parrafo-programa {
+  font-family: 'Poppins', sans-serif;
+}
+
+.frase-final {
+  font-style: italic;
+}
+
+.seccion-label {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+}
+
+.texto-cuerpo {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
+
+/* === SECCIONES BASE === */
+section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* === BOTÓN CTA === */
+.cta-button {
+  display: inline-block;
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cta-button:hover {
+  background-color: var(--color-acento);
+}
+
+/* === FONDOS ALTERNATIVOS === */
+.fondo-claro {
+  background-color: var(--color-fondo-claro);
+}
+
+.fondo-acento {
+  background-color: var(--color-acento);
+  color: var(--color-blanco);
+}
+
+/* === NAVBAR === */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-fondo-claro);
+    padding: 1rem 2rem;
+  }
+  
+  .logo img {
+    height: 50px; /* ajustá según el tamaño real del logo */
+    width: auto;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+  
+  .nav-links li a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: var(--color-principal);
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: var(--color-acento);
+  }
+/* === SECCIÓN HOME / INICIO === */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    background-color: var(--color-fondo-claro); /* gris claro */
+    padding: 4rem 2rem;
+    flex-wrap: wrap; /* responsive */
+  }
+  
+  .home-content {
+    flex: 1;
+    max-width: 600px;
+  }
+  .resaltado-final {
+    color: var(--color-acento); /* o usá otro color como #3aafaf directamente */
+    font-weight: 700;
+  }
+  
+  .home-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--color-principal); /* #2c3e50 */
+    margin-bottom: 1rem;
+  }
+  
+  .home-content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: var(--color-acento); /* #3aafaf */
+    margin-bottom: 1.5rem;
+  }
+  
+  .home-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: var(--color-principal);
+    margin-bottom: 2rem;
+    max-width: 90%;
+  }
+  
+  .home-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .home-image img {
+    width: 100%;
+    max-width: 320px;
+    border-top-left-radius: 5rem;
+    background-color: var(--color-principal); /* para que combine con fondo oscuro atrás */
+    padding: 1rem;
+  }
+  .onda-bottom {
+    line-height: 0;
+    position: relative;
+    top: -1px; /* asegura que se monte justo encima */
+    z-index: 1;
+  }
+  
+  .onda-bottom svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+/* === SECCIÓN: Este programa es para vos si... === */
+.programa-para-vos {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+  .programa-para-vos h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--color-principal);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .programa-para-vos h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .bloque-items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto 2.5rem;
+  }
+  
+  .item {
+    background-color: var(--color-acento); /* #3aafaf */
+    color: var(--color-blanco);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 1.3rem 1rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100px;
+  }
+  
+  /* Hover suave */
+  .item:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Ítems importantes visualmente coherentes */
+  .item.importante {
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Frase final debajo */
+  .frase-final {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--color-principal);
+    margin-top: 2rem;
+  }
+/* === SECCIÓN: ¿Qué vas a lograr? === */
+.logros {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+  .logros h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--color-principal);
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .bloque-logros {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+  }
+  
+  .logros .item {
+    background-color: var(--color-acento); /* #3aafaf */
+    color: var(--color-blanco);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 1.3rem 1rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100px;
+  }
+  
+  /* Hover sutil */
+  .logros .item:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Ítems importantes */
+  .logros .item.importante {
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Frase final */
+  .logros .frase-final {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--color-principal);
+    margin-top: 2rem;
+  }
+/* === SECCIÓN: Invitación Final (sin fondo) === */
+.invitacion-final {
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+  .invitacion-final h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--color-principal); /* #2c3e50 */
+    margin-bottom: 1.5rem;
+  }
+  
+  .invitacion-final p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: var(--color-principal);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+  }
+  
+  /* Botón más grande */
+  .cta-button.grande {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+  }
+/* === SECCIÓN: ¿Cómo funciona el programa? === */
+.como-funciona {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .como-funciona h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--color-principal);
+    margin-bottom: 2rem;
+  }
+  
+  .como-funciona p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: var(--color-principal);
+    line-height: 1.6;
+    max-width: 750px;
+    margin: 0 auto 3rem;
+  }
+  
+  /* Lista estilo tarjetas */
+  .funciona-lista {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .funciona-lista li {
+    background-color: #f4f6f8;
+    padding: 1.5rem 1.5rem;
+    border-radius: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    color: var(--color-principal);
+    text-align: left;
+    line-height: 1.6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Iconito decorativo al inicio */
+  .funciona-lista li::before {
+    content: "✨";
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Separación para el icono */
+  .funciona-lista li {
+    padding-left: 3rem;
+  }
+  
+  /* Hover efecto */
+  .funciona-lista li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Negrita en palabras clave */
+  .como-funciona strong {
+    font-weight: 600;
+    color: var(--color-acento);
+  }
+/* === SECCIÓN: Ejes de Transformación === */
+.ejes-transformacion {
+    background-color: #ffffff;
+    text-align: left;
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .ejes-transformacion h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--color-principal); /* #2c3e50 */
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .eje {
+    margin-bottom: 3rem;
+  }
+  
+  .eje h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--color-acento); /* #3aafaf */
+    margin-bottom: 0.5rem;
+  }
+  
+  .eje p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: var(--color-principal);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+  
+  .eje blockquote {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--color-principal);
+    margin: 1rem 0 0 0;
+    padding-left: 1rem;
+    border-left: 3px solid var(--color-acento);
+  }
+/* === SECCIÓN: Este programa NO es para vos === */
+.no-es-para-vos {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+  .no-es-para-vos h2 {
+    font-family: 'Codec Pro', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--color-principal); /* #2c3e50 */
+    margin-bottom: 2.5rem;
+  }
+  
+  .no-es-para-vos h2 strong {
+    font-weight: 700;
+  }
+  
+  .no-items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto 2.5rem;
+  }
+  
+  .no-items .item {
+    background-color: var(--color-acento); /* #3aafaf */
+    color: #ffffff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 1.2rem 1rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover sutil */
+  .no-items .item:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Ítems importantes */
+  .no-items .item.importante {
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Frase final */
+  .no-es-para-vos .frase-final {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--color-principal);
+  }
+/* === SECCIÓN: Inversión y Formas de Pago === */
+.inversion {
+    background-color: #d6dbdf;
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .inversion h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--color-acento); /* #3aafaf */
+    text-align: left;
+    margin-bottom: 2.5rem;
+  }
+  
+  .inversion h3 {
+    font-family: 'Codec Pro', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-principal); /* #2c3e50 */
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .inversion p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    color: var(--color-principal);
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+  }
+  
+  .inversion ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    color: var(--color-principal);
+    margin-bottom: 2rem;
+  }
+  
+  .inversion ul li {
+    margin-bottom: 0.6rem;
+    line-height: 1.5;
+  }
+  
+  /* Botón */
+  .inversion .cta-button {
+    display: inline-block;
+    margin-top: 2rem;
+  }
+  .curva-blanco-a-gris.invertida {
+    line-height: 0;
+    overflow: hidden;
+    position: relative;
+    transform: rotateX(180deg);
+    z-index: 1;
+  }
+  
+  .curva-blanco-a-gris.invertida svg {
+    display: block;
+    width: 100%;
+    height: 150px;
+  }
+/* === SECCIÓN: Sobre mí === */
+#sobre-mi {
+    background-color: #ffffff;
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  #sobre-mi h2 {
+    font-family: 'Codec Pro', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-principal); /* #2c3e50 */
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  
+  #sobre-mi p {
+    font-family: 'TT Commons Pro Expanded', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-principal);
+    margin-bottom: 1.2rem;
+  }
+  
+  #sobre-mi p strong {
+    font-weight: 700;
+    color: var(--color-principal);
+  }
+  
+  #sobre-mi .mi-transformacion {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 2rem 0;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-principal);
+  }
+  
+  #sobre-mi .mi-transformacion li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+  }
+  
+  #sobre-mi .mi-transformacion li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-acento); /* #3aafaf */
+    font-weight: bold;
+  }
+/* === SECCIÓN: Preguntas Frecuentes === */
+.faq {
+    background-color: #ffffff;
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .faq h2 {
+    font-family: 'Codec Pro', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-principal); /* #2c3e50 */
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .faq details {
+    margin-bottom: 1.5rem;
+    border: 1px solid #3aafaf;
+    border-radius: 0.75rem;
+    padding: 1.2rem;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .faq details[open] {
+    background-color: #eafafa;
+  }
+  
+  .faq summary {
+    font-family: 'TT Commons Pro Expanded', sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--color-principal);
+    cursor: pointer;
+    outline: none;
+    list-style: none;
+    position: relative;
+  }
+  
+  .faq summary::marker {
+    display: none;
+  }
+  
+  .faq summary::after {
+    content: "▼";
+    font-size: 0.9rem;
+    color: #3aafaf;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .faq details[open] summary::after {
+    transform: rotate(180deg);
+  }
+  
+  .faq p {
+    margin-top: 1rem;
+    font-family: 'TT Commons Pro Expanded', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #2c3e50;
+  }
+/* === CONTACTO === */
+.contacto {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  
+  .contacto h2 {
+    font-family: 'Codec Pro', sans-serif;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contacto p {
+    font-family: 'TT Commons Pro Expanded', sans-serif;
+    font-size: 1rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+  }
+  
+  .tarjetas-contacto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .tarjeta {
+    background-color: #f9f9f9;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+  
+  .tarjeta i {
+    font-size: 2rem;
+    color: #3aafaf;
+    margin-bottom: 1rem;
+  }
+  
+  .tarjeta h3 {
+    font-family: 'Codec Pro', sans-serif;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tarjeta p {
+    font-family: 'TT Commons Pro Expanded', sans-serif;
+    font-size: 0.95rem;
+    margin: 0;
+  }
+  
+  .tarjeta a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .tarjeta a:hover {
+    color: #3aafaf;
+  }
+  
+/* === FOOTER === */
+.footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 2.5rem 2rem 1.5rem;
+    font-family: 'TT Commons Pro Expanded', sans-serif;
+  }
+  
+  .footer-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .footer-left img.footer-logo {
+    max-height: 60px;
+    width: auto;
+  }
+  
+  .footer-right {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .footer-right a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .footer-right a:hover {
+    color: #3aafaf;
+    transform: scale(1.2);
+  }
+  
+  .frase-footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #ecf0f1;
+  }
+               
