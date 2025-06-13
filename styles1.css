@@ -19,6 +19,7 @@ body {
   background-color: var(--color-blanco);
   color: var(--color-negro);
   line-height: 1.6;
+  margin-top: 50px;
 }
 
 a {
