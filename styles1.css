@@ -1,5 +1,4 @@
-/* === VARIABLES Y FUENTES === */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;500;700&family=Source+Sans+Pro:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;500;700&family=Source+Sans+Pro:wght@400;700&display=swap");
 
 :root {
   --color-principal: #2c3e50;
@@ -9,7 +8,6 @@
   --color-negro: #000000;
 }
 
-/* === RESET === */
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +15,7 @@
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   background-color: var(--color-blanco);
   color: var(--color-negro);
   line-height: 1.6;
@@ -33,32 +31,57 @@ ul {
 }
 
 section {
-    padding: 4rem 2rem;
-  }
-  
-  .inversion-fondo,
-  .home-fondo {
-    width: 100%;
-    background-color: var(--color-fondo-claro);
-    padding: 0; /* importante para anular el padding del section base */
-  }
-  
-  .inversion-fondo > .inversion,
-  .home-fondo > .home {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-  }
-  
+  padding: 4rem 2rem;
+}
 
-/* === TIPOGRAFÍAS POR USO === */
-.titulo { font-family: 'Playfair Display', serif; color: var(--color-principal); }
-.subtitulo, .nav-link, .boton, .frase-final { font-family: 'Poppins', sans-serif; }
-.frase-final { font-style: italic; color: var(--color-principal); text-align: center; margin-top: 2rem; font-size: 1rem; }
-.seccion-label { font-family: 'Source Sans Pro', sans-serif; font-weight: 700; }
-.texto-cuerpo { font-family: 'Source Sans Pro', sans-serif; }
+.inversion-fondo,
+.home-fondo {
+  width: 100%;
+  background-color: var(--color-fondo-claro);
+  padding: 0;
+}
 
-/* === BOTÓN CTA === */
+.inversion-fondo > .inversion,
+.home-fondo > .home {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.titulo {
+  font-family: "Playfair Display", serif;
+  color: var(--color-principal);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.subtitulo,
+.nav-link,
+.cta-button,
+.frase-final {
+  font-family: "Poppins", sans-serif;
+}
+.subtitulo {
+  font-size: 1.5rem;
+  color: var(--color-principal);
+  margin-bottom: 2rem;
+}
+.frase-final {
+  font-style: italic;
+  color: var(--color-principal);
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+.texto-base {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.05rem;
+  color: var(--color-principal);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
 .cta-button {
   display: inline-block;
   background-color: var(--color-principal);
@@ -66,32 +89,25 @@ section {
   padding: 1rem 2rem;
   border-radius: 2rem;
   font-weight: bold;
-  margin-top: 1.5rem;
   transition: background-color 0.3s ease;
-  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
 }
 .cta-button:hover {
   background-color: var(--color-acento);
 }
-.cta-button.grande {
-  padding: 1rem 2.5rem;
-  font-size: 1.1rem;
-}
 
-/* === GRILLAS REUTILIZABLES === */
 .grilla-5 {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin: 0 auto 2.5rem;
-  max-width: 1200px;
+  max-width: 1000px;
 }
 
-/* === ÍTEMS GENÉRICOS === */
 .item {
   background-color: var(--color-acento);
   color: var(--color-blanco);
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   padding: 1.3rem 1rem;
@@ -112,539 +128,430 @@ section {
   font-size: 1.05rem;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
-/* === NAVBAR === */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--color-fondo-claro);
-    padding: 1rem 2rem;
-  }
-  .logo img { height: 50px; }
-  .nav-links { display: flex; gap: 2.5rem; }
-  .nav-links li a {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.95rem;
-    color: var(--color-principal);
-    transition: color 0.3s ease;
-  }
-  .nav-links li a:hover {
-    color: var(--color-acento);
-  }
-  
-  /* === HOME === */
-  /* Fondo gris que ocupa todo el ancho */
-.home-fondo {
-    background-color: var(--color-fondo-claro); /* gris claro */
-    width: 100%;
-  }
-  
-  /* Contenedor centrado */
-  .home {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-    padding: 4rem 2rem;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  
-  /* Texto */
-  .home-content {
-    flex: 1;
-    max-width: 600px;
-  }
-  .resaltado-final {
-    color: var(--color-acento); /* o usá otro color como #3aafaf directamente */
-    font-weight: 700;
-  }
-  
-  .home-content h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    color: var(--color-principal);
-    margin-bottom: 1rem;
-  }
-  
-  .home-content h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    color: var(--color-acento);
-    margin-bottom: 1.5rem;
-  }
-  
-  .home-content p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    color: var(--color-principal);
-    margin-bottom: 2rem;
-    max-width: 90%;
-  }
-  
-  /* Imagen */
-  .home-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .home-image img {
-    width: 100%;
-    max-width: 320px;
-    border-top-left-radius: 5rem;
-    background-color: var(--color-principal);
-    padding: 1rem;
-  }
-  
-  .onda-bottom {
-    line-height: 0;
-    position: relative;
-    top: -1px;
-    z-index: 1;
-  }
-  .onda-bottom svg {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  /* === CURVAS === */
-  .curva-blanco-a-gris.invertida {
-    line-height: 0;
-    overflow: hidden;
-    transform: rotateX(180deg);
-    z-index: 1;
-  }
-  .curva-blanco-a-gris.invertida svg {
-    width: 100%;
-    height: 150px;
-    display: block;
-  }
-/* === SECCIONES CON ÍTEMS EN GRILLA === */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-fondo-claro);
+  padding: 1rem 2rem;
+}
+.logo img {
+  height: 50px;
+}
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+}
+.nav-links li a {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  color: var(--color-principal);
+  transition: color 0.3s ease;
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.home-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.home-content h1 {
+  text-align: left;
+}
+
+.home-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.home-image img {
+  width: 100%;
+  max-width: 320px;
+  border-top-left-radius: 5rem;
+  background-color: var(--color-principal);
+  padding: 1rem;
+}
+
+.onda-bottom {
+  line-height: 0;
+  position: relative;
+  top: -1px;
+  z-index: 1;
+}
+.onda-bottom svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.curva-blanco-a-gris.invertida {
+  line-height: 0;
+  overflow: hidden;
+  transform: rotateX(180deg);
+  z-index: 1;
+}
+.curva-blanco-a-gris.invertida svg {
+  width: 100%;
+  height: 150px;
+  display: block;
+}
+
 .programa-para-vos,
 .logros,
-.no-es-para-vos {
+.no-es-para-vos,
+.como-funciona,
+#sobre-mi {
   background-color: #ffffff;
   text-align: center;
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
-.programa-para-vos h2,
-.logros h2,
-.no-es-para-vos h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
+.invitacion-final {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.funciona-lista {
+  display: grid;
+  gap: 1.5rem;
+  padding: 0;
+}
+.funciona-lista li {
+  background-color: #f4f6f8;
+  padding: 1.5rem 3rem 1.5rem 3rem;
+  border-radius: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.05rem;
   color: var(--color-principal);
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.funciona-lista li::before {
+  content: "✨";
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  font-size: 1.1rem;
+}
+.funciona-lista li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+.como-funciona strong {
+  font-weight: 600;
+  color: var(--color-acento);
+}
+
+.ejes-transformacion {
+  background-color: #ffffff;
+  text-align: left;
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.eje {
+  margin-bottom: 3rem;
+}
+
+.eje h3 {
+  font-size: 1.6rem;
+  color: var(--color-acento);
+  margin-bottom: 0.5rem;
+}
+
+.eje blockquote {
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--color-principal);
+  margin: 1rem 0 0 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--color-acento);
+}
+.frase-impacto {
+  background-color: var(--color-fondo-claro);
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  color: var(--color-principal);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.grilla-no-es-para-vos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto auto;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto 2.5rem;
+}
+
+.grilla-no-es-para-vos .item:nth-child(3) {
+  grid-column: 1 / span 2;
+  justify-self: center;
+  max-width: 70%;
+}
+
+.contacto {
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.tarjetas-contacto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tarjeta {
+  display: block;
+  background-color: #f9f9f9;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: var(--color-principal);
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta i {
+  font-size: 2rem;
+  color: var(--color-acento);
   margin-bottom: 1rem;
 }
-/* === SECCIÓN: Invitación Final (sin fondo) === */
-.invitacion-final {
-    text-align: center;
-    padding: 4rem 2rem;
-  }
-  
-  .invitacion-final h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    color: var(--color-principal); /* #2c3e50 */
-    margin-bottom: 1.5rem;
-  }
-  
-  .invitacion-final p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
-    color: var(--color-principal);
-    max-width: 700px;
-    margin: 0 auto 2rem;
-  }
 
-.programa-para-vos h3 {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 700;
-  font-size: 1.5rem;
-  margin-bottom: 2.5rem;
+.tarjeta h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  color: var(--color-principal);
+  margin-bottom: 0.5rem;
 }
 
-/* Reutilizamos grilla-5 y .item */
+.tarjeta a {
+  all: unset;
+}
 
-.como-funciona {
-    background-color: #ffffff;
-    text-align: center;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  .como-funciona h2 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 700;
-    font-size: 2rem;
-    color: var(--color-principal);
-    margin-bottom: 2rem;
-  }
-  
-  .como-funciona p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
-    color: var(--color-principal);
-    line-height: 1.6;
-    max-width: 750px;
-    margin: 0 auto 3rem;
-  }
-  
-  /* Tarjetas verticales con detalle visual */
-  .funciona-lista {
-    display: grid;
-    gap: 1.5rem;
-    padding: 0;
-  }
-  .funciona-lista li {
-    background-color: #f4f6f8;
-    padding: 1.5rem 3rem 1.5rem 3rem;
-    border-radius: 1rem;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.05rem;
-    color: var(--color-principal);
-    text-align: left;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .funciona-lista li::before {
-    content: "✨";
-    position: absolute;
-    top: 1.2rem;
-    left: 1.2rem;
-    font-size: 1.1rem;
-  }
-  .funciona-lista li:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-  }
-  .como-funciona strong {
-    font-weight: 600;
-    color: var(--color-acento);
-  }
-  /* === SECCIÓN: Ejes de Transformación === */
-.ejes-transformacion {
-    background-color: #ffffff;
-    text-align: left;
-    padding: 4rem 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  .ejes-transformacion h2 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 700;
-    font-size: 1.8rem;
-    text-align: center;
-    color: var(--color-principal); /* #2c3e50 */
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  
-  .eje {
-    margin-bottom: 3rem;
-  }
-  
-  .eje h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
-    color: var(--color-acento); /* #3aafaf */
-    margin-bottom: 0.5rem;
-  }
-  
-  .eje p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    color: var(--color-principal);
-    line-height: 1.6;
-    margin-bottom: 0.5rem;
-  }
-  
-  .eje blockquote {
-    font-family: 'Poppins', sans-serif;
-    font-style: italic;
-    font-size: 1rem;
-    color: var(--color-principal);
-    margin: 1rem 0 0 0;
-    padding-left: 1rem;
-    border-left: 3px solid var(--color-acento);
-  }
-  .contacto {
-    padding: 4rem 2rem;
-    text-align: center;
-    background-color: #ffffff;
-  }
-  
-  .contacto h2 {
-    font-family: 'Codec Pro', sans-serif;
-    font-size: 2rem;
-    color: var(--color-principal);
-    margin-bottom: 0.5rem;
-  }
-  
-  .contacto p {
-    font-family: 'TT Commons Pro Expanded', sans-serif;
-    font-size: 1rem;
-    color: var(--color-principal);
-    margin-bottom: 2rem;
-  }
-  
-  .tarjetas-contacto {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  .tarjeta {
-    background-color: #f9f9f9;
-    border-radius: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    padding: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .tarjeta:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-  }
-  .tarjeta i {
-    font-size: 2rem;
-    color: var(--color-acento);
-    margin-bottom: 1rem;
-  }
-  .tarjeta h3 {
-    font-family: 'Codec Pro', sans-serif;
-    font-size: 1.2rem;
-    color: var(--color-principal);
-    margin-bottom: 0.5rem;
-  }
-  .tarjeta p {
-    font-family: 'TT Commons Pro Expanded', sans-serif;
-    font-size: 0.95rem;
-    margin: 0;
-  }
-  .tarjeta a {
-    color: var(--color-principal);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  .tarjeta a:hover {
-    color: var(--color-acento);
-  }
-  .inversion {
-    background-color: var(--color-fondo-claro);
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  .inversion-fondo {
-    background-color: var(--color-fondo-claro); /* gris claro */
-    width: 100%;
-  }
-  
-  
-  .inversion h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    color: var(--color-acento);
-    margin-bottom: 2.5rem;
-  }
-  
-  .inversion h3 {
-    font-family: 'Codec Pro', sans-serif;
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: var(--color-principal);
-    margin-top: 2rem;
-    margin-bottom: 0.8rem;
-  }
-  
-  .inversion p,
-  .inversion ul {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.05rem;
-    color: var(--color-principal);
-    line-height: 1.6;
-  }
-  
-  .inversion ul {
-    list-style: disc;
-    padding-left: 1.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  .inversion ul li {
-    margin-bottom: 0.6rem;
-  }
-  
-  .inversion .cta-button {
-    margin-top: 2rem;
-  }
-  
-  #sobre-mi {
-    background-color: #ffffff;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: left;
-  }
-  
-  #sobre-mi h2 {
-    font-family: 'Codec Pro', sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--color-principal);
-    text-align: center;
-    margin-bottom: 2.5rem;
-  }
-  
-  #sobre-mi p {
-    font-family: 'TT Commons Pro Expanded', sans-serif;
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: var(--color-principal);
-    margin-bottom: 1.2rem;
-  }
-  
-  #sobre-mi p strong {
-    font-weight: 700;
-  }
-  
-  .mi-transformacion {
-    font-family: 'Poppins', sans-serif;
-    color: var(--color-principal);
-    margin: 2rem 0;
-    padding-left: 0;
-  }
-  
-  .mi-transformacion li {
-    padding-left: 1.5rem;
-    position: relative;
-    margin-bottom: 0.8rem;
-    line-height: 1.6;
-  }
-  
-  .mi-transformacion li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--color-acento);
-    font-weight: bold;
-  }
-  .faq {
-    background-color: #ffffff;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-  }
-  
-  .faq h2 {
-    font-family: 'Codec Pro', sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--color-principal);
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-  
-  .faq details {
-    margin-bottom: 1.5rem;
-    border: 1px solid var(--color-acento);
-    border-radius: 0.75rem;
-    padding: 1.2rem;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
-    transition: all 0.3s ease;
-  }
-  
-  .faq details[open] {
-    background-color: #eafafa;
-  }
-  
-  .faq summary {
-    font-family: 'TT Commons Pro Expanded', sans-serif;
-    font-weight: 600;
-    font-size: 1.05rem;
-    color: var(--color-principal);
-    cursor: pointer;
-    list-style: none;
-    position: relative;
-  }
-  
-  .faq summary::marker {
-    display: none;
-  }
-  
-  .faq summary::after {
-    content: "▼";
-    font-size: 0.9rem;
-    color: var(--color-acento);
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: transform 0.3s ease;
-  }
-  
-  .faq details[open] summary::after {
-    transform: rotate(180deg);
-  }
-  
-  .faq p {
-    margin-top: 1rem;
-    font-family: 'TT Commons Pro Expanded', sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--color-principal);
-  }
-  .footer {
-    background-color: var(--color-principal);
-    color: #ffffff;
-    padding: 2.5rem 2rem 1.5rem;
-    font-family: 'TT Commons Pro Expanded', sans-serif;
-  }
-  
-  .footer-contenido {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-  }
-  
-  .footer-logo {
-    max-height: 60px;
-    width: auto;
-  }
-  
-  .footer-right {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-  }
-  
-  .footer-right a {
-    color: #ffffff;
-    font-size: 1.5rem;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .footer-right a:hover {
-    color: var(--color-acento);
-    transform: scale(1.2);
-  }
-  
-  .frase-footer {
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 0.95rem;
-    font-style: italic;
-    color: #ecf0f1;
-  }
-            
-  
+.inversion {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.color-acento,
+.tarjeta a:hover,
+.nav-links li a:hover {
+  color: var(--color-acento);
+}
+
+.inversion h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--color-principal);
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.inversion ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.inversion ul li {
+  margin-bottom: 0.6rem;
+}
+
+.inversion .cta-button {
+  margin-top: 2rem;
+}
+.resaltado-frase {
+  color: var(--color-acento);
+  font-weight: 700;
+}
+.cta-final-impacto {
+  background-color: var(--color-fondo-claro);
+  text-align: center;
+  padding: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: var(--color-acento);
+}
+
+#sobre-mi {
+  padding: 4rem 2rem;
+  text-align: left;
+}
+
+#sobre-mi p {
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+.check-list {
+  font-family: "Poppins", sans-serif;
+  color: var(--color-principal);
+  margin: 2rem 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.check-list li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+.check-list li::before {
+  content: "✓";
+  color: var(--color-acento);
+  font-weight: bold;
+}
+
+.galeria-sobre-mi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.galeria-sobre-mi img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.firma,
+.firma-nombre {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  color: var(--color-principal);
+}
+
+.firma {
+  font-style: italic;
+}
+
+.firma-nombre {
+  margin-top: -0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.faq {
+  background-color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: left;
+}
+
+.faq details {
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--color-acento);
+  border-radius: 0.75rem;
+  padding: 1.2rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.faq details[open] {
+  background-color: #eafafa;
+}
+
+.faq summary {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--color-principal);
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+}
+
+.faq summary::after {
+  content: "▼";
+  font-size: 0.9rem;
+  color: var(--color-acento);
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: transform 0.3s ease;
+}
+
+.faq details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.footer {
+  background-color: var(--color-principal);
+  color: #ffffff;
+  padding: 2.5rem 2rem 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-logo {
+  max-height: 60px;
+  width: auto;
+}
+
+.footer-right {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.footer-right a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-right a:hover {
+  color: var(--color-acento);
+  transform: scale(1.2);
+}
+
+.frase-footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #ecf0f1;
+}
