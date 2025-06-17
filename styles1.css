@@ -6,6 +6,10 @@
   --color-fondo-claro: #d6dbdf;
   --color-blanco: #ffffff;
   --color-negro: #000000;
+  --gris-suave: #f4f6f8;
+  --gris-muy-claro: #f9f9f9;
+  --celeste-claro: #eafafa;
+  --gris-texto-suave: #ecf0f1;
 }
 
 * {
@@ -57,9 +61,18 @@ section {
   text-align: center;
 }
 .subtitulo,
-.nav-link,
 .cta-button,
-.frase-final {
+.frase-final,
+.texto-base,
+.funciona-lista li,
+.eje blockquote,
+.check-list,
+.tarjeta h3,
+.faq summary,
+.footer,
+.nav-links li a,
+.frase-impacto,
+.cta-final-impacto {
   font-family: "Poppins", sans-serif;
 }
 .subtitulo {
@@ -76,7 +89,6 @@ section {
 }
 
 .texto-base {
-  font-family: "Poppins", sans-serif;
   font-size: 1.05rem;
   color: var(--color-principal);
   line-height: 1.6;
@@ -108,7 +120,6 @@ section {
 .item {
   background-color: var(--color-acento);
   color: var(--color-blanco);
-  font-family: "Source Sans Pro", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   padding: 1.3rem 1rem;
@@ -151,7 +162,6 @@ section {
   gap: 2.5rem;
 }
 .nav-links li a {
-  font-family: "Poppins", sans-serif;
   font-size: 0.95rem;
   color: var(--color-principal);
   transition: color 0.3s ease;
@@ -189,6 +199,9 @@ section {
   border-top-left-radius: 5rem;
   background-color: var(--color-principal);
   padding: 1rem;
+  min-height: 200px;
+  object-fit: cover;
+  aspect-ratio: 1 / 1; 
 }
 
 .onda-bottom {
@@ -220,7 +233,7 @@ section {
 .no-es-para-vos,
 .como-funciona,
 #sobre-mi {
-  background-color: #ffffff;
+  background-color: var(--color-blanco);
   text-align: center;
   margin: 0 auto;
   max-width: 1000px;
@@ -237,10 +250,9 @@ section {
   padding: 0;
 }
 .funciona-lista li {
-  background-color: #f4f6f8;
+  background-color: var(--gris-suave);
   padding: 1.5rem 3rem 1.5rem 3rem;
   border-radius: 1rem;
-  font-family: "Poppins", sans-serif;
   font-size: 1.05rem;
   color: var(--color-principal);
   text-align: left;
@@ -265,7 +277,7 @@ section {
 }
 
 .ejes-transformacion {
-  background-color: #ffffff;
+  background-color: var(--color-blanco);
   text-align: left;
   padding: 4rem 2rem;
   max-width: 1000px;
@@ -283,7 +295,6 @@ section {
 }
 
 .eje blockquote {
-  font-family: "Poppins", sans-serif;
   font-style: italic;
   font-size: 1rem;
   color: var(--color-principal);
@@ -295,7 +306,6 @@ section {
   background-color: var(--color-fondo-claro);
   text-align: center;
   padding: 2.5rem 1.5rem;
-  font-family: "Poppins", sans-serif;
   font-size: 1.3rem;
   color: var(--color-principal);
   font-weight: 700;
@@ -319,7 +329,7 @@ section {
 
 .contacto {
   text-align: center;
-  background-color: #ffffff;
+  background-color: var(--color-blanco);
 }
 
 .tarjetas-contacto {
@@ -332,7 +342,7 @@ section {
 
 .tarjeta {
   display: block;
-  background-color: #f9f9f9;
+  background-color: var(--gris-muy-claro);
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   padding: 2rem;
@@ -353,14 +363,15 @@ section {
 }
 
 .tarjeta h3 {
-  font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   color: var(--color-principal);
   margin-bottom: 0.5rem;
 }
 
 .tarjeta a {
-  all: unset;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .inversion {
@@ -403,7 +414,6 @@ section {
   background-color: var(--color-fondo-claro);
   text-align: center;
   padding: 1rem;
-  font-family: "Poppins", sans-serif;
   font-weight: 700;
   color: var(--color-acento);
 }
@@ -419,7 +429,6 @@ section {
 }
 
 .check-list {
-  font-family: "Poppins", sans-serif;
   color: var(--color-principal);
   margin: 2rem 0;
   padding-left: 0;
@@ -438,21 +447,48 @@ section {
   font-weight: bold;
 }
 
-.galeria-sobre-mi {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  margin: 2rem 0;
+/* Contenedor principal del slider */
+.swiper.galeria-sobre-mi {
+  position: relative;
+  padding: 4rem; 
+  margin: 1rem auto;
+  width: 100%;
+
+  z-index: 1;
 }
 
-.galeria-sobre-mi img {
+
+/* Slides dentro del Swiper */
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos de imágenes */
+.swiper-slide img {
+  max-width: 300px;
   width: 100%;
   height: auto;
   border-radius: 1rem;
-  object-fit: cover;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.swiper-slide img:hover {
+  transform: scale(1.18) translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+div .swiper-button-next,
+div .swiper-button-prev {
+  color: var(--color-acento);
+}
 .firma,
 .firma-nombre {
   font-family: "Playfair Display", serif;
@@ -471,7 +507,7 @@ section {
 }
 
 .faq {
-  background-color: #ffffff;
+  background-color: var(--color-blanco);
   max-width: 800px;
   margin: 0 auto;
   padding: 4rem 2rem;
@@ -483,17 +519,16 @@ section {
   border: 1px solid var(--color-acento);
   border-radius: 0.75rem;
   padding: 1.2rem;
-  background-color: #f9f9f9;
+  background-color: var(--gris-muy-claro);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease;
 }
 
 .faq details[open] {
-  background-color: #eafafa;
+  background-color: var(--celeste-claro);
 }
 
 .faq summary {
-  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1.05rem;
   color: var(--color-principal);
@@ -518,9 +553,8 @@ section {
 
 .footer {
   background-color: var(--color-principal);
-  color: #ffffff;
+  color: var(--color-blanco);
   padding: 2.5rem 2rem 1.5rem;
-  font-family: "Poppins", sans-serif;
 }
 
 .footer-contenido {
@@ -545,7 +579,7 @@ section {
 }
 
 .footer-right a {
-  color: #ffffff;
+  color: var(--color-blanco);
   font-size: 1.5rem;
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -561,5 +595,5 @@ section {
   margin-top: 2rem;
   font-size: 0.95rem;
   font-style: italic;
-  color: #ecf0f1;
+  color: var(--gris-texto-suave);
 }
