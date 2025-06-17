@@ -597,3 +597,57 @@ div .swiper-button-prev {
   font-style: italic;
   color: var(--gris-texto-suave);
 }
+/* Scrollbar para Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px; /* Ancho del scroll vertical */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Color de fondo */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-acento); /* Color del "pulgar" */
+  border-radius: 10px;       /* Bordes redondeados */
+  border: 2px solid #f0f0f0; /* Espacio entre el thumb y el track */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-acento) #f0f0f0;
+}
+.btn-volver-arriba {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #3aafaf;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.2s ease;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-volver-arriba:hover {
+  transform: scale(1.1);
+  background-color: var(--color-acento);
+}
+
+.btn-volver-arriba.mostrar {
+  opacity: 1;
+  visibility: visible;
+}
+
+html {
+  scroll-behavior: smooth;
+}

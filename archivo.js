@@ -16,4 +16,13 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       },
     });
+    const btnVolverArriba = document.querySelector(".btn-volver-arriba");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 400) {
+      btnVolverArriba.classList.add("mostrar");
+    } else {
+      btnVolverArriba.classList.remove("mostrar");
+    }
+  });
   });
